@@ -1,5 +1,4 @@
 _printf()
-screen shot of custom printf function
 
 Description
 This Repo has has all the code necessary for our (David John Coleman II and Joann Vuong's) custom function called _printf(). It is a mini-version of C Language function printf() from stdio.h, and our function _printf() attempts to replicate the exact same process as the C function printf(). This project was completed as a part of the curriculum for a software development program.
@@ -7,7 +6,7 @@ This Repo has has all the code necessary for our (David John Coleman II and Joan
 C language standard functions used
 write, malloc, free, va_start, va_end, va_copy, va_arg
 Brief Synopsis
-_printf() function takes 2 arguments: a character pointer to a string: format, and a 'variable arguments list': arg_list. _printf() loops through the format string searching for a conversion specifier, which is indicated with the '%' symbol. If found, the match_specifier() function loops through an array of structs (contianing character and function pairs) to find the specifier function that is matched with the given conversion specifier from the format string, and then returns a pointer to that paired function. _printf() uses the pointer to that specifier function to call the specifier function on the next queued argument from the arg_list. Each specifier function writes a character one at a time as determined from the value in arg_list. In the buffer branch and in the 'release: v0.1', our code writes the characters from the format string and the associated specifiers to the buffer, and in the 'no-buffer' branch, our code is instead written to standard output one at a time.
+_printf() function takes 2 arguments: a character pointer to a string: format, and a 'variable arguments list': arg_list. _printf() loops through the format string searching for a conversion specifier, which is indicated with the '%' symbol. Iffound, the match_specifier() function loops through an array of structs (contianing character and function pairs) to find the specifier function that is matched with the given conversion specifier from the format string, and then returns a pointer to that paired function. _printf() uses the pointer to that specifier function to call the specifier function on the next queued argument from the arg_list. Each specifier function writes a character one at a time as determined from the value in arg_list. In the buffer branch and in the 'release: v0.1', our code writes the characters from the format string and the associated specifiers to the buffer, and in the 'no-buffer' branch, our code is instead written to standard output one at a time.
 
 Usage
 The directory contents should be compiled with the following command:
